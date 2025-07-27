@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@/generated/prisma";
-
+import { PrismaClient } from "@/generated/prisma"; // ✅ This is correct if your output matches
 const prisma = new PrismaClient();
 
-// Create a new ticket
+// Create a new agent
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();

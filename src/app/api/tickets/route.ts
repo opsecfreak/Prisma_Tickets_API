@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@/generated/prisma";
-
+import { PrismaClient } from "@/generated/prisma"; // ✅ This is correct if your output matches
 const prisma = new PrismaClient();
 
 // Create a new ticket
@@ -45,4 +44,3 @@ export async function GET(req: NextRequest) {
     return new NextResponse("Internal Server Error", { status: 500 });
   }
 }
-// src/app/api/tickets/route.ts
